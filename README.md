@@ -1,6 +1,6 @@
 # ICT-3107-3108-SEPM-
 # lecture -01 (03-10-2026,Saturday)
-## The code of Non-Staic
+## The code of `Non-Staic`
 ~~~
 public class Student {
      int count=0;
@@ -18,7 +18,7 @@ public class Main{
     }
 }
 ~~~
-## The code of Static
+## The code of `Static`
 ~~~
 
 public class Student {
