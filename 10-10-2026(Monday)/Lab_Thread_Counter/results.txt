@@ -1,0 +1,195 @@
+===== TEST: 1 1000 ===== 
+--- Thread-safe --- 
+Mode                 : Thread-safe (AtomicLong)
+Threads (N)          : 1
+Increments/thread (M): 1000
+Expected count       : 1000
+Static count         : 1000
+Non-static total     : 1000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 1 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 1
+Increments/thread (M): 1000
+Expected count       : 1000
+Static count         : 1000
+Non-static total     : 1000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 2 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 1
+Increments/thread (M): 1000
+Expected count       : 1000
+Static count         : 1000
+Non-static total     : 1000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 3 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 1
+Increments/thread (M): 1000
+Expected count       : 1000
+Static count         : 1000
+Non-static total     : 1000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 4 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 1
+Increments/thread (M): 1000
+Expected count       : 1000
+Static count         : 1000
+Non-static total     : 1000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 5 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 1
+Increments/thread (M): 1000
+Expected count       : 1000
+Static count         : 1000
+Non-static total     : 1000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+===== TEST: 2 10000 ===== 
+--- Thread-safe --- 
+Mode                 : Thread-safe (AtomicLong)
+Threads (N)          : 2
+Increments/thread (M): 10000
+Expected count       : 20000
+Static count         : 20000
+Non-static total     : 20000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 1 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 2
+Increments/thread (M): 10000
+Expected count       : 20000
+Static count         : 20000
+Non-static total     : 20000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 2 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 2
+Increments/thread (M): 10000
+Expected count       : 20000
+Static count         : 18835
+Non-static total     : 20000
+Absolute difference  : 1165
+Percentage difference: 5.8250%
+-------------------------------------------
+--- Unsafe run 3 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 2
+Increments/thread (M): 10000
+Expected count       : 20000
+Static count         : 10079
+Non-static total     : 20000
+Absolute difference  : 9921
+Percentage difference: 49.6050%
+-------------------------------------------
+--- Unsafe run 4 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 2
+Increments/thread (M): 10000
+Expected count       : 20000
+Static count         : 20000
+Non-static total     : 20000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 5 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 2
+Increments/thread (M): 10000
+Expected count       : 20000
+Static count         : 10867
+Non-static total     : 20000
+Absolute difference  : 9133
+Percentage difference: 45.6650%
+-------------------------------------------
+===== TEST: 5 10000 ===== 
+--- Thread-safe --- 
+Mode                 : Thread-safe (AtomicLong)
+Threads (N)          : 5
+Increments/thread (M): 10000
+Expected count       : 50000
+Static count         : 50000
+Non-static total     : 50000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 1 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 5
+Increments/thread (M): 10000
+Expected count       : 50000
+Static count         : 50000
+Non-static total     : 50000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 2 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 5
+Increments/thread (M): 10000
+Expected count       : 50000
+Static count         : 21708
+Non-static total     : 50000
+Absolute difference  : 28292
+Percentage difference: 56.5840%
+-------------------------------------------
+--- Unsafe run 3 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 5
+Increments/thread (M): 10000
+Expected count       : 50000
+Static count         : 25233
+Non-static total     : 50000
+Absolute difference  : 24767
+Percentage difference: 49.5340%
+-------------------------------------------
+--- Unsafe run 4 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 5
+Increments/thread (M): 10000
+Expected count       : 50000
+Static count         : 20662
+Non-static total     : 50000
+Absolute difference  : 29338
+Percentage difference: 58.6760%
+-------------------------------------------
+--- Unsafe run 5 --- 
+Mode                 : Unsynchronized (long)
+Threads (N)          : 5
+Increments/thread (M): 10000
+Expected count       : 50000
+Static count         : 23266
+Non-static total     : 50000
+Absolute difference  : 26734
+Percentage difference: 53.4680%
+-------------------------------------------
+===== TEST: 10 50000 ===== 
+--- Thread-safe --- 
+Mode                 : Thread-safe (AtomicLong)
+Threads (N)          : 10
+Increments/thread (M): 50000
+Expected count       : 500000
+Static count         : 500000
+Non-static total     : 500000
+Absolute difference  : 0
+Percentage difference: 0.0000%
+-------------------------------------------
+--- Unsafe run 1 --- 
