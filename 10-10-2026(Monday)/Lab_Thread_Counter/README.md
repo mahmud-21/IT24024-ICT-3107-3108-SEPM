@@ -1,12 +1,12 @@
 
 
-Readme · Md. Mahmudur Rahman
+Readme · MD
 # SEPM-001: Static vs Non-Static Variables in Multithreading
  
-**Name:** Firstname Lastname  
-**Student ID:** ________  
-**Course / Section:** ________  
-**Date:** ________
+**Name:** Md Mahmudur Rahman 
+**Student ID:**IT24024 
+**Course / Section:** Software Engineering and Project Managemnet
+**Date:** 10-10-2026
  
 ## 1. Files
  
