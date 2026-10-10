@@ -1,6 +1,6 @@
 
 
-Readme · MD
+Readme · Md. Mahmudur Rahman
 # SEPM-001: Static vs Non-Static Variables in Multithreading
  
 **Name:** Firstname Lastname  
