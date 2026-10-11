@@ -332,4 +332,4 @@ An inner class object holds a hidden reference to its outer `Employee` object, s
 - A **reference variable** is a small stack value that points to a big heap object.
 - An **inner class** object lives on the heap and keeps a link to its outer object.
 
-*Submitted by Ishtiak Ahmed Ayon (ID: 24039), ICT 3108.*
+*Submitted by Md Mahmudur Rahman (ID: IT24024), ICT 3108.*
