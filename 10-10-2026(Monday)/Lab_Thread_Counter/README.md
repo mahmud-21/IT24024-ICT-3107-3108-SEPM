@@ -13,7 +13,7 @@ Readme · MD
 | File | Description |
 |---|---|
 | `Firstname_Thread.java` | Single-class Java program (both experiments) |
-| `run_tests.sh` | Script that runs all test cases |
+| `run_tests.bat` | Script that runs all test cases |
 | `results.txt` | Raw, unedited program output |
 | `README.md` | This report |
  
