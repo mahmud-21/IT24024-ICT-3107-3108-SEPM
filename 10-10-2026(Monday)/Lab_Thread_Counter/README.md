@@ -35,7 +35,7 @@ java Firstname_Thread <threads> <increments> <true|false>
  
 | Test | Threads (N) | Increments (M) | Expected | Static count | Non-static total | Abs. diff | Diff (%) |
 |---|---|---|---|---|---|---|---|
-| TC1 | 1 | 1,000 | 1,000 |  |  |  |  |
+| TC1 | 1 | 1,000 | 1,000 |1000  |1000  | 1000 |0  |0.0000%
 | TC2 | 2 | 10,000 | 20,000 |  |  |  |  |
 | TC3 | 5 | 10,000 | 50,000 |  |  |  |  |
 | TC4 | 10 | 50,000 | 500,000 |  |  |  |  |
