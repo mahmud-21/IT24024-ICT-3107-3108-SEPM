@@ -120,14 +120,13 @@ Prime testing checks divisors up to the square root using `i <= number / i` to a
 **Capture required before submission:** run `tools/screenshots.cjs` using the steps in `VALIDATION.md`, or capture manually. Browser screenshots could not be taken in the build environment. The links below become visible after capture. Four actual server-generated HTML responses are included in `screen-previews/`.
 
 ### Welcome Page
-![Welcome Page](screenshots/home.png)
+<img width="1788" height="921" alt="Screenshot 2026-11-09 232334" src="https://github.com/user-attachments/assets/e157a41f-4074-4faf-8265-3d3aecbfbc6e" />
 ### Game Page
-![Game Page](screenshots/game.png)
+<img width="1863" height="912" alt="Screenshot 2026-11-09 232419" src="https://github.com/user-attachments/assets/77070eab-4849-48dc-af4d-d9f9b6aa118b" />
 ### Result Page
-![Result Page](screenshots/result.png)
+<img width="1317" height="912" alt="Screenshot 2026-11-09 232712" src="https://github.com/user-attachments/assets/5d377fd3-539b-4c4d-b0f1-4313864b8840" />
 ### Leaderboard
-![Leaderboard](screenshots/leaderboard.png)
-
+<img width="1806" height="842" alt="Screenshot 2026-11-09 232724" src="https://github.com/user-attachments/assets/95d13352-67b2-4ee6-b5fa-182554d70767" />
 ## Testing
 Run `mvn test`. Six tests cover 7/8/1 prime cases, negative numbers, largest int prime, integer remainder including negative operands, zero divisor, sin30/cos60/tan45, undefined tangent, nonfinite inputs, tolerance, maximum/zero/partial scores, JDBC insertion, special-character names, timestamps and top-ten ordering. See `VALIDATION.md` for checks performed on the delivered files.
 
