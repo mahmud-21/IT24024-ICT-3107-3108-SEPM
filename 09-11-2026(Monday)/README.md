@@ -118,13 +118,16 @@ Prime testing checks divisors up to the square root using `i <= number / i` to a
 ## Application screenshots
 
 **Capture required before submission:** run `tools/screenshots.cjs` using the steps in `VALIDATION.md`, or capture manually. Browser screenshots could not be taken in the build environment. The links below become visible after capture. Four actual server-generated HTML responses are included in `screen-previews/`.
-
+~~~
 ### Welcome Page
 <img width="1788" height="921" alt="Screenshot 2026-11-09 232334" src="https://github.com/user-attachments/assets/e157a41f-4074-4faf-8265-3d3aecbfbc6e" />
+~~~
 ### Game Page
 <img width="1863" height="912" alt="Screenshot 2026-11-09 232419" src="https://github.com/user-attachments/assets/77070eab-4849-48dc-af4d-d9f9b6aa118b" />
+~~~
 ### Result Page
 <img width="1317" height="912" alt="Screenshot 2026-11-09 232712" src="https://github.com/user-attachments/assets/5d377fd3-539b-4c4d-b0f1-4313864b8840" />
+~~~
 ### Leaderboard
 <img width="1806" height="842" alt="Screenshot 2026-11-09 232724" src="https://github.com/user-attachments/assets/95d13352-67b2-4ee6-b5fa-182554d70767" />
 ## Testing
