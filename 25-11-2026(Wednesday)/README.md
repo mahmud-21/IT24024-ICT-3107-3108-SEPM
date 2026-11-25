@@ -1,71 +1,108 @@
-# Software Engineering and Project Management
+# Software Engineering – Software Design
+## OBE-Based Question Paper (Bloom's Taxonomy, BNQF-Aligned)
 
-## OBE Assessment and Question-to-CO Mapping
-
-| Assessment detail | Specification |
+| Item | Detail |
 | --- | --- |
-| Duration | 1 hour |
-| Full marks | 40 |
-| Format | 10 compulsory short-answer questions, 4 marks each |
-| Bloom’s taxonomy domain | Cognitive |
-| Levels assessed | C1 Remember (Knowledge) and C2 Understand (Understanding) |
-| BNQF reference level | Level 7, assuming a four-year bachelor’s programme |
+| **Course** | Software Engineering |
+| **Topic** | Software Design (design fundamentals, metrics, architecture, design patterns) |
+| **Source** | Lecture slides: `4-SoftEng-Design.ppt` |
+| **Total Marks** | 40 |
+| **Time** | 1 Hour |
+| **Domain** | Cognitive |
+| **Bloom Levels** | C1 Knowledge, C2 Understanding |
+| **Framework** | OBE, BNQF-aligned (Bachelor level, Level 7) |
 
-## 1. Course Outcomes
+---
 
-By the end of the course, students will be able to perform the following tasks.
+## 1. Course Outcomes (CO)
 
-| CO | Measurable course outcome | Target Bloom level | BNQF Level 7 alignment |
+| CO | Course Outcome | Bloom Level |
+| --- | --- | --- |
+| CO1 | Explain the software design process, its steps and its outcomes. | C1–C2 |
+| CO2 | Explain the principles of good design: modularity, coupling, cohesion, abstraction, encapsulation and information hiding. | C1–C2 |
+| CO3 | Describe and interpret design quality measures (design reviews and CK metrics: CBO, LCOM, WMC). | C1–C2 |
+| CO4 | Describe software architecture and common architectural styles. | C1–C2 |
+| CO5 | Explain design patterns (GoF and Enterprise Application Architecture patterns), with their benefits and liabilities. | C1–C2 |
+
+---
+
+## 2. Question Paper
+
+**Instructions:** Answer **all** questions. Marks are shown in brackets.
+
+### Question 1 (8 Marks) – CO1
+**a)** Define software design. State the input of the design process. **[3 | C1 Knowledge]**
+
+**b)** Distinguish architectural design from detailed design. Explain why recording the rationale of design decisions improves long-term maintainability. **[5 | C2 Understanding]**
+
+### Question 2 (8 Marks) – CO2
+**a)** Define *coupling* and *cohesion*. **[3 | C1 Knowledge]**
+
+**b)** Explain why a good design aims for low coupling and high cohesion. Describe how abstraction, encapsulation and information hiding support modularity. **[5 | C2 Understanding]**
+
+### Question 3 (8 Marks) – CO3
+**a)** State the formulas for CBO and LCOM2, and name what the "W" in WMC stands for. **[3 | C1 Knowledge]**
+
+**b)** A `Rectangle` class has 4 attributes (x, y, width, height) and 3 methods (constructor, `draw()`, `calculateArea()`). The attribute usage counts are m(x) = 2, m(y) = 2, m(width) = 3, m(height) = 3. Compute LCOM2 and interpret the result. Explain what LCOM2 = 0 and LCOM2 = 1 would indicate. **[5 | C2 Understanding]**
+
+### Question 4 (8 Marks) – CO4
+**a)** Define software architecture. List four architectural styles. **[3 | C1 Knowledge]**
+
+**b)** Explain the *Layered* style and the *Model–View–Controller (MVC)* style. Describe the responsibility of each layer or role, and give one situation where each is suitable. **[5 | C2 Understanding]**
+
+### Question 5 (8 Marks) – CO5
+**a)** Define a design pattern. Name the three GoF pattern categories and give one example pattern for each. **[3 | C1 Knowledge]**
+
+**b)** Explain the *Strategy* pattern: its intent, the roles of Strategy, ConcreteStrategy and Context (use the Navigator/RouteStrategy example), and one benefit and one liability. **[5 | C2 Understanding]**
+
+---
+
+## 3. Question–CO–Bloom Mapping
+
+| Question | Marks | Slide Topic | CO | Bloom Level | Cognitive Verb |
+| --- | --- | --- | --- | --- | --- |
+| Q1(a) | 3 | What is software design? | CO1 | C1 Knowledge | Define, State |
+| Q1(b) | 5 | Design steps and outcome | CO1 | C2 Understanding | Distinguish, Explain |
+| Q2(a) | 3 | Coupling and cohesion | CO2 | C1 Knowledge | Define |
+| Q2(b) | 5 | Modularity, abstraction, information hiding | CO2 | C2 Understanding | Explain, Describe |
+| Q3(a) | 3 | CK metrics (CBO, LCOM2, WMC) | CO3 | C1 Knowledge | State |
+| Q3(b) | 5 | LCOM2 and the Rectangle example | CO3 | C2 Understanding | Compute, Interpret, Explain |
+| Q4(a) | 3 | Software architecture and styles | CO4 | C1 Knowledge | Define, List |
+| Q4(b) | 5 | Layered and MVC styles | CO4 | C2 Understanding | Explain, Describe |
+| Q5(a) | 3 | Design patterns and GoF classification | CO5 | C1 Knowledge | Define, Name |
+| Q5(b) | 5 | Strategy pattern | CO5 | C2 Understanding | Explain |
+
+---
+
+## 4. Assessment Blueprint
+
+| CO | C1 Knowledge | C2 Understanding | Total |
 | --- | --- | --- | --- |
-| CO1 | Explain the software design process and how design quality measures relate to maintainability. | C2 Understand | Fundamental Skills — software design principles |
-| CO2 | Explain the activities and characteristics of commonly used software development process models. | C2 Understand | Fundamental Skills — software development processes |
-| CO3 | Distinguish functional and non-functional requirements and explain the purpose of requirements documentation and validation. | C2 Understand | Fundamental Skills — requirements engineering concepts and practices |
-| CO4 | Differentiate software testing levels and explain how verification and validation contribute to software quality. | C2 Understand | Fundamental Skills — testing and quality assurance principles |
-| CO5 | Explain how scope definition, effort estimation, scheduling, and risk management support software project planning. | C2 Understand | Fundamental Skills — software project management principles |
+| CO1 | 3 | 5 | 8 |
+| CO2 | 3 | 5 | 8 |
+| CO3 | 3 | 5 | 8 |
+| CO4 | 3 | 5 | 8 |
+| CO5 | 3 | 5 | 8 |
+| **Total** | **15 (37.5%)** | **25 (62.5%)** | **40** |
 
-## 2. Question Paper and Mapping
+---
 
-**Instructions.** Answer all questions. Each question carries 4 marks. The marks and Bloom levels are listed separately for parts (a) and (b).
+## 5. Marking Guide (for examiners)
 
-| Q | Question | Marks (a + b) | Domain | Bloom level (a / b) | CO |
-| --- | --- | ---: | --- | --- | --- |
-| 1 | (a) Define software design. (b) Explain the basic steps of the software design process, from requirements to component-level design. | 1 + 3 | Cognitive | C1 / C2 | CO1 |
-| 2 | (a) State what Coupling Between Object Classes (CBO) and Lack of Cohesion of Methods (LCOM) measure. (b) Explain why high coupling and low cohesion can each make software harder to maintain. | 2 + 2 | Cognitive | C1 / C2 | CO1 |
-| 3 | (a) List four common software development life cycle activities. (b) Explain how requirements analysis and maintenance each contribute to the life cycle. | 2 + 2 | Cognitive | C1 / C2 | CO2 |
-| 4 | (a) Name the process model that organizes development into sequential phases. (b) Compare the Waterfall and incremental models in terms of development sequence, delivery, and handling of changing requirements. | 1 + 3 | Cognitive | C1 / C2 | CO2 |
-| 5 | (a) Define a functional requirement and a non-functional requirement. (b) Give one example of each for an online course registration system. | 2 + 2 | Cognitive | C1 / C2 | CO3 |
-| 6 | (a) State the purpose of a Software Requirements Specification (SRS). (b) Explain how requirements validation checks completeness, consistency, and agreement with stakeholder needs. | 1 + 3 | Cognitive | C1 / C2 | CO3 |
-| 7 | (a) Name four software testing levels. (b) Explain how unit testing and integration testing differ in scope and purpose. | 2 + 2 | Cognitive | C1 / C2 | CO4 |
-| 8 | (a) Define software verification and software validation. (b) Explain how a design review against the SRS and a user acceptance test each contribute to software quality. | 2 + 2 | Cognitive | C1 / C2 | CO4 |
-| 9 | (a) Define project scope and Work Breakdown Structure (WBS). (b) Explain how a WBS supports effort estimation and scheduling. | 2 + 2 | Cognitive | C1 / C2 | CO5 |
-| 10 | (a) Define a project risk. (b) Explain risk identification, prioritization, and response planning using a potential software delivery delay as an example. | 1 + 3 | Cognitive | C1 / C2 | CO5 |
-| | **Total** | **40** | | | |
+- **Q1(a):** Design is a problem-solving process (1.5). The input is the requirements (1.5).
+- **Q1(b):** Architectural design organises software into components (2). Detailed design describes component behaviour (1.5). Rationale helps future maintainers (1.5).
+- **Q2(a):** Coupling is interdependence among components (1.5). Cohesion is the strength of association within a component (1.5).
+- **Q2(b):** Low coupling keeps changes local (1.5). High cohesion gives one clear responsibility (1.5). Abstraction (0.75). Encapsulation and information hiding (0.75). Link to modularity and interfaces (1).
+- **Q3(a):** CBO(A) = number of classes used by A (1). LCOM2 = 1 − Σm(ai) / (m·a) (1.5). W = weighted by method complexity (0.5).
+- **Q3(b):** Σm(ai) = 2+2+3+3 = 10 (1). LCOM2 = 1 − 10/12 = 1/6 ≈ 0.166 (2). Close to 0, so highly cohesive (1). 0 means every method uses every attribute; 1 means none does (1).
+- **Q4(a):** Definition: structures comprising elements, relations and properties (2). Any four styles: layered, event-based, MVC, blackboard/repository, pipes and filters (1).
+- **Q4(b):** Layered: each layer depends only on the next (2.5). MVC: model, view, controller roles (2.5).
+- **Q5(a):** Pattern = recurring problem and core solution (1). Creational, Structural, Behavioral (1). One example each (1).
+- **Q5(b):** Intent (1.5). Roles: RouteStrategy, WalkingStrategy/CarStrategy, Navigator (2). One benefit (1). One liability (0.5).
 
-## 3. Assessment Blueprint
+---
 
-| CO | Mapped questions | C1 Remember | C2 Understand | Total marks | Weight |
-| --- | --- | ---: | ---: | ---: | ---: |
-| CO1 | Q1–Q2 | 3 | 5 | 8 | 20% |
-| CO2 | Q3–Q4 | 3 | 5 | 8 | 20% |
-| CO3 | Q5–Q6 | 3 | 5 | 8 | 20% |
-| CO4 | Q7–Q8 | 4 | 4 | 8 | 20% |
-| CO5 | Q9–Q10 | 3 | 5 | 8 | 20% |
-| **Total** | **Q1–Q10** | **16 (40%)** | **24 (60%)** | **40** | **100%** |
+## 6. Notes
 
-## 4. OBE and BNQF Alignment
-
-Part (a) of each question measures recall of facts and terms at C1. Part (b) measures understanding at C2 through explanations, comparisons, or examples.
-
-For direct assessment, add the marks a student earns on the two questions mapped to each CO.
-
-**Individual CO score (%) = (marks earned on the mapped questions ÷ 8) × 100**
-
-Apply the department’s approved attainment threshold when reporting results.
-
-The question paper provides evidence of knowledge and understanding within the **Fundamental Skills** domain of BNQF Level 7. Broader Level 7 competencies require additional evidence across the programme. CO1 draws on the supplied software design slides. CO2–CO5 use standard undergraduate coverage of software processes, requirements, quality assurance, and project management.
-
-## References
-
-- Secondary and Higher Education Division, Ministry of Education, Bangladesh. [Bangladesh National Qualifications Framework](https://shed.gov.bd/sites/default/files/files/shed.portal.gov.bd/publications/f1c410ad_3af2_462c_a8ae_df1ffdb27905/daf6821b-666e-44e4-85fe-6a0fe8998a9f.pdf), Appendix 4, Level 7 learning outcome descriptors.
-- Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom’s taxonomy of educational objectives*. Longman.
-- *4-SoftEng-Design.ppt*. Supplied course lecture slides.
+- COs are derived from the slide content; replace with the department's official CO statements if they differ.
+- Confirm the BNQF level and descriptors against your department's mapping.
