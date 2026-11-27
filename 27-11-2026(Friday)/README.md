@@ -1,7 +1,7 @@
 # Name : Md. Mahmudur Rahman
 # ID : IT24024
 # The Answer of the given questions 
-~~~
+java```
 Answers - CampusBoot Reflection Questions
 
 1. What would happen if @Retention(RetentionPolicy.RUNTIME) were forgotten?
@@ -12,4 +12,4 @@ Without it, the annotation gets the default retention, CLASS, which means the co
 
 3. Why is setAccessible(true) both powerful and risky?
 It is powerful because it lets reflection read and write private fields and call private methods or constructors, which is what lets the framework inject values without needing setters. It is risky because it bypasses encapsulation: code can break class invariants, change state that the author meant to protect, and depend on private implementation details that may change. It can also be a security problem if untrusted code uses it to reach sensitive data, and in newer Java versions the module system can block it (InaccessibleObjectException).
-~~~
+```
