@@ -1,109 +1,115 @@
 # Software Engineering – Software Design
 ## Name : Md Mahmudur Rahman ID : IT24024 
-## OBE-Based Question Paper (Bloom's Taxonomy, BNQF-Aligned)
+# Software Engineering (SE) — OBE-Based Question Paper
 
-| Item | Detail |
-| --- | --- |
-| **Course** | Software Engineering |
-| **Topic** | Software Design (design fundamentals, metrics, architecture, design patterns) |
-| **Source** | Lecture slides: `4-SoftEng-Design.ppt` |
-| **Total Marks** | 40 |
-| **Time** | 1 Hour |
-| **Domain** | Cognitive |
-| **Bloom Levels** | C1 Knowledge, C2 Understanding |
-| **Framework** | OBE, BNQF-aligned (Bachelor level, Level 7) |
+**Unit:** Software Design  
+**Level:** Undergraduate, aligned to selected BNQF Level 7 descriptors for a four-year bachelor’s programme  
+**Time:** 1 hour · **Full marks:** 40
 
----
+## Assessment instructions
 
-## 1. Course Outcomes (CO)
+Answer all six questions. Show your working for metric calculations and label the roles and relationships in any diagram. Use brief, case-specific explanations. The suggested times include 5 minutes for reading and review.
 
-| CO | Course Outcome | Bloom Level |
-| --- | --- | --- |
-| CO1 | Explain the software design process, its steps and its outcomes. | C1–C2 |
-| CO2 | Explain the principles of good design: modularity, coupling, cohesion, abstraction, encapsulation and information hiding. | C1–C2 |
-| CO3 | Describe and interpret design quality measures (design reviews and CK metrics: CBO, LCOM, WMC). | C1–C2 |
-| CO4 | Describe software architecture and common architectural styles. | C1–C2 |
-| CO5 | Explain design patterns (GoF and Enterprise Application Architecture patterns), with their benefits and liabilities. | C1–C2 |
+## Course outcomes
 
----
+The five COs below are proposed for this paper. Use the approved course outcome wording and numbering if supplied by the department. On successful completion of the assessed unit, students should be able to:
 
-## 2. Question Paper
+| CO | Measurable course outcome | Evidence in this paper |
+|---|---|---|
+| CO1 | Define core software design terms and explain how coupling and cohesion affect maintainability. | Definitions and a cause-and-effect explanation |
+| CO2 | Apply an object-oriented design metric to a class model. | A worked CK LCOM calculation |
+| CO3 | Analyze design dependencies and identify where an interface mismatch should be resolved. | A traced dependency and analysis of change impact |
+| CO4 | Evaluate alternative designs against stated quality criteria and justify a selection. | A case-specific comparison and recommendation |
+| CO5 | Create an object-oriented design that supports interchangeable behavior and satisfies given requirements. | A labelled class design and interaction description |
 
-**Instructions:** Answer **all** questions. Marks are shown in brackets.
+## Question paper
 
-### Question 1 (8 Marks) – CO1
-**a)** Define software design. State the input of the design process. **[3 | C1 Knowledge]**
+### Q1 · Remember (Knowledge) · CO1 · 4 marks
 
-**b)** Distinguish architectural design from detailed design. Explain why recording the rationale of design decisions improves long-term maintainability. **[5 | C2 Understanding]**
+Define **coupling** and **cohesion** in object-oriented software design. **[2 marks each]**
 
-### Question 2 (8 Marks) – CO2
-**a)** Define *coupling* and *cohesion*. **[3 | C1 Knowledge]**
+### Q2 · Understand (Comprehension) · CO1 · 6 marks
 
-**b)** Explain why a good design aims for low coupling and high cohesion. Describe how abstraction, encapsulation and information hiding support modularity. **[5 | C2 Understanding]**
+A `CourseService` validates enrolments, formats receipts, and sends SMS alerts. It directly calls a third-party SMS gateway. Explain why it is preferable to keep closely related responsibilities together **[3]** and why reducing direct dependencies on external classes can make changes easier **[3]**. Use the example to explain each point.
 
-### Question 3 (8 Marks) – CO3
-**a)** State the formulas for CBO and LCOM2, and name what the "W" in WMC stands for. **[3 | C1 Knowledge]**
+### Q3 · Apply · CO2 · 7 marks
 
-**b)** A `Rectangle` class has 4 attributes (x, y, width, height) and 3 methods (constructor, `draw()`, `calculateArea()`). The attribute usage counts are m(x) = 2, m(y) = 2, m(width) = 3, m(height) = 3. Compute LCOM2 and interpret the result. Explain what LCOM2 = 0 and LCOM2 = 1 would indicate. **[5 | C2 Understanding]**
+The table lists every instance field accessed by each method of a class.
 
-### Question 4 (8 Marks) – CO4
-**a)** Define software architecture. List four architectural styles. **[3 | C1 Knowledge]**
+| Method | Instance fields accessed |
+|---|---|
+| M1 | `studentId` |
+| M2 | `studentId`, `courseId` |
+| M3 | `receiptNumber` |
+| M4 | `receiptNumber` |
 
-**b)** Explain the *Layered* style and the *Model–View–Controller (MVC)* style. Describe the responsibility of each layer or role, and give one situation where each is suitable. **[5 | C2 Understanding]**
+Apply the Chidamber–Kemerer LCOM rule. Use unordered method pairs. Let P contain pairs that share no instance field and Q contain pairs that share at least one instance field. Use **LCOM = max(|P| − |Q|, 0)**.
 
-### Question 5 (8 Marks) – CO5
-**a)** Define a design pattern. Name the three GoF pattern categories and give one example pattern for each. **[3 | C1 Knowledge]**
+1. Group all six method pairs into P and Q. **[4]**
+2. State both counts and calculate LCOM. **[3]**
 
-**b)** Explain the *Strategy* pattern: its intent, the roles of Strategy, ConcreteStrategy and Context (use the Navigator/RouteStrategy example), and one benefit and one liability. **[5 | C2 Understanding]**
+### Q4 · Analyze · CO3 · 7 marks
 
----
+A campus application expects all notification providers to implement `Notifier.send(recipient, message)`. An existing vendor library instead exposes `TextGateway.push(message, phoneNumber)`. Two application services each call the vendor library directly and reorder the arguments.
 
-## 3. Question–CO–Bloom Mapping
+1. Trace the current dependencies from both services to the vendor and explain how a change to the vendor method would propagate. **[3]**
+2. Analyze how introducing an Adapter would redistribute those dependencies. Identify which classes would depend on the `Notifier` interface and which class would depend on `TextGateway`. Explain where the argument translation would occur. **[4]**
 
-| Question | Marks | Slide Topic | CO | Bloom Level | Cognitive Verb |
-| --- | --- | --- | --- | --- | --- |
-| Q1(a) | 3 | What is software design? | CO1 | C1 Knowledge | Define, State |
-| Q1(b) | 5 | Design steps and outcome | CO1 | C2 Understanding | Distinguish, Explain |
-| Q2(a) | 3 | Coupling and cohesion | CO2 | C1 Knowledge | Define |
-| Q2(b) | 5 | Modularity, abstraction, information hiding | CO2 | C2 Understanding | Explain, Describe |
-| Q3(a) | 3 | CK metrics (CBO, LCOM2, WMC) | CO3 | C1 Knowledge | State |
-| Q3(b) | 5 | LCOM2 and the Rectangle example | CO3 | C2 Understanding | Compute, Interpret, Explain |
-| Q4(a) | 3 | Software architecture and styles | CO4 | C1 Knowledge | Define, List |
-| Q4(b) | 5 | Layered and MVC styles | CO4 | C2 Understanding | Explain, Describe |
-| Q5(a) | 3 | Design patterns and GoF classification | CO5 | C1 Knowledge | Define, Name |
-| Q5(b) | 5 | Strategy pattern | CO5 | C2 Understanding | Explain |
+### Q5 · Evaluate · CO4 · 8 marks
 
----
+A registration portal must check prerequisites, reserve a seat, and record enrolment in that order. Two screens now invoke the workflow, and more clients are expected. The administration team must also be able to inspect seat availability independently.
 
-## 4. Assessment Blueprint
+- **Design A.** Each client directly coordinates the three subsystem services.
+- **Design B.** Clients call one registration operation through a Facade. The administration team can still query the seat service directly.
 
-| CO | C1 Knowledge | C2 Understanding | Total |
-| --- | --- | --- | --- |
-| CO1 | 3 | 5 | 8 |
-| CO2 | 3 | 5 | 8 |
-| CO3 | 3 | 5 | 8 |
-| CO4 | 3 | 5 | 8 |
-| CO5 | 3 | 5 | 8 |
-| **Total** | **15 (37.5%)** | **25 (62.5%)** | **40** |
+Compare both designs against **workflow consistency** and **ease of changing the workflow** **[4]**. Explain one trade-off of your preferred design **[2]**. Recommend a design and justify how it accounts for the independent administration query **[2]**.
 
----
+### Q6 · Create · CO5 · 8 marks
 
-## 5. Marking Guide (for examiners)
+Design a fee calculator using the **Strategy** pattern. Regular students pay the full base fee, scholarship students pay 50%, and exchange students pay a flat BDT 2,000. The application must be able to switch fee policies on the same calculator instance at runtime. A new fee policy must be addable without modifying the calculator class.
 
-- **Q1(a):** Design is a problem-solving process (1.5). The input is the requirements (1.5).
-- **Q1(b):** Architectural design organises software into components (2). Detailed design describes component behaviour (1.5). Rationale helps future maintainers (1.5).
-- **Q2(a):** Coupling is interdependence among components (1.5). Cohesion is the strength of association within a component (1.5).
-- **Q2(b):** Low coupling keeps changes local (1.5). High cohesion gives one clear responsibility (1.5). Abstraction (0.75). Encapsulation and information hiding (0.75). Link to modularity and interfaces (1).
-- **Q3(a):** CBO(A) = number of classes used by A (1). LCOM2 = 1 − Σm(ai) / (m·a) (1.5). W = weighted by method complexity (0.5).
-- **Q3(b):** Σm(ai) = 2+2+3+3 = 10 (1). LCOM2 = 1 − 10/12 = 1/6 ≈ 0.166 (2). Close to 0, so highly cohesive (1). 0 means every method uses every attribute; 1 means none does (1).
-- **Q4(a):** Definition: structures comprising elements, relations and properties (2). Any four styles: layered, event-based, MVC, blackboard/repository, pipes and filters (1).
-- **Q4(b):** Layered: each layer depends only on the next (2.5). MVC: model, view, controller roles (2.5).
-- **Q5(a):** Pattern = recurring problem and core solution (1). Creational, Structural, Behavioral (1). One example each (1).
-- **Q5(b):** Intent (1.5). Roles: RouteStrategy, WalkingStrategy/CarStrategy, Navigator (2). One benefit (1). One liability (0.5).
+1. Draw a labelled class diagram or write an equivalent structured class design. Show the calculator, the common fee-policy interface, the three concrete policies, their relationships, and how the active policy is supplied or changed. **[5]**
+2. Show the call sequence or pseudocode for calculating fees on the same calculator with a BDT 3,000 base fee, first with the regular policy and then with the scholarship policy. Explain how a fourth policy would be added. **[3]**
 
----
+## OBE assessment blueprint
 
-## 6. Notes
+Knowledge and Understanding correspond to Remember and Understand in the revised Bloom cognitive taxonomy. Each question is mapped to the primary cognitive process required for its response.
 
-- COs are derived from the slide content; replace with the department's official CO statements if they differ.
-- Confirm the BNQF level and descriptors against your department's mapping.
+| Question | Revised Bloom level | Primary CO | Marks | Share | Suggested minutes |
+|---|---|---|---:|---:|---:|
+| Q1 | C1 Remember | CO1 | 4 | 10% | 4 |
+| Q2 | C2 Understand | CO1 | 6 | 15% | 7 |
+| Q3 | C3 Apply | CO2 | 7 | 17.5% | 9 |
+| Q4 | C4 Analyze | CO3 | 7 | 17.5% | 10 |
+| Q5 | C5 Evaluate | CO4 | 8 | 20% | 11 |
+| Q6 | C6 Create | CO5 | 8 | 20% | 14 |
+| **Total** | **All six cognitive levels** | **Five COs** | **40** | **100%** | **55** |
+
+### CO marks and attainment
+
+| CO | Questions | Maximum marks |
+|---|---|---:|
+| CO1 | Q1, Q2 | 10 |
+| CO2 | Q3 | 7 |
+| CO3 | Q4 | 7 |
+| CO4 | Q5 | 8 |
+| CO5 | Q6 | 8 |
+| **Total** | **Q1–Q6** | **40** |
+
+For each student, calculate **CO score (%) = marks earned on questions mapped to that CO ÷ maximum marks for that CO × 100**. For cohort attainment, report the percentage of assessed students meeting the department’s approved threshold for each CO.
+
+## BNQF alignment
+
+| Selected Level 7 Fundamental Skills expectation | Assessment evidence |
+|---|---|
+| Demonstrate knowledge and critical understanding of established principles in the field. | Q1–Q2 assess recall and explanation of coupling, cohesion, and their impact on maintenance. |
+| Apply concepts and principles beyond the context in which they were first studied, and use knowledge and skills to solve problems. | Q3 applies a quality metric to a class model. Q4 analyzes a vendor integration. Q6 constructs a design for a campus fee calculator. |
+| Critically evaluate the appropriateness of different approaches to solving a problem. | Q5 requires a criteria-based comparison and a justified design decision. |
+
+This written paper samples the cognitive evidence specified above. The alignment covers selected descriptors within a broader qualification framework.
+
+## References
+
+- Course lecture slides, *4-SoftEng-Design.ppt*. Topics used include coupling and cohesion, CK LCOM, Adapter, Facade, and Strategy.
+- Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom’s taxonomy of educational objectives*. Longman.
+- Ministry of Education, Bangladesh. *Bangladesh National Qualifications Framework*, Appendix 4, Level 7, Fundamental Skills, four-year and five-year bachelor’s descriptors. [Official BNQF framework](https://shed.gov.bd/sites/default/files/files/shed.portal.gov.bd/publications/f1c410ad_3af2_462c_a8ae_df1ffdb27905/daf6821b-666e-44e4-85fe-6a0fe8998a9f.pdf)
