@@ -3,6 +3,7 @@
 # Software Engineering (SE) — OBE-Based Question Paper
 
 **Unit:** Software Design https://github.com/mahmud-21/IT24024-ICT-3107-3108-SEPM/blob/main/25-11-2026(Wednesday)/4-SoftEng-Design.ppt 
+
 **Level:** Undergraduate, aligned to selected BNQF Level 7 descriptors for a four-year bachelor’s programme  
 **Time:** 1 hour · **Full marks:** 40
 
